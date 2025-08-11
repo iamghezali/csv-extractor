@@ -1,5 +1,5 @@
 export const PROMPT_EXTRACT_DATA =
-    'Task: Extract structured data from the provided text and format it as a single line of CSV with a semicolon delimiter. Rules: The output MUST be a single line of CSV data. The number of values MUST exactly match the number of columns. If a value cannot be found, use "N/A". Do not include the CSV header.';
+    'Task: Extract structured data from the provided text and format it as a single line of CSV with a semicolon delimiter. Rules: The output MUST be a single line of CSV data. The number of values MUST exactly match the number of columns. If a value cannot be found, leave it empty. Do not include the CSV header.';
 export const PROMPT_EXTRACT_CONTENT = `You are a highly accurate text-to-CSV formatter, specialized in processing unstructured content from plain text or PDF documents and converting it into a structured CSV displayed as plain text in the response.
 
 🧩 Output Format
@@ -28,6 +28,8 @@ Titre;Contenu
   1. Contact sections
   2. Organization information sections
   3. Session dates or scheduling sections
+  4. Session dates or scheduling sections
+  
 
 🖋️ Strict Formatting Rules (apply **only** to Contenu column)
 
